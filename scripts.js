@@ -7,6 +7,16 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
+        '.merch': {
+            location: '/blocks/merch/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
+        '.tabs': {
+            location: '/blocks/tabs/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
     },
 };
 

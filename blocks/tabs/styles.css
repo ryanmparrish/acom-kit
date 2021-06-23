@@ -1,0 +1,130 @@
+.tabs {
+    position: relative;
+    padding: var(--spacing-mobile) 0 var(--spacing-mobile) 0;
+}
+
+.tabs.is-Loaded {
+    display: block;
+    opacity: 1;
+}
+
+.tabs .ribbon img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.tabs .ribbon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 25px;
+}
+
+.tabs .title {
+    color: #585858;
+    text-align: center;
+}
+
+.tabs .container {
+    max-width: var(--grid-mobile-container-width);
+    margin: 0 auto;
+}
+
+.tabs .container {
+    position: relative;
+}
+
+.tabs .list-container {
+    background: rgb(143,143,143);
+    background: linear-gradient(0deg, rgba(220,220,220,0.2) 0%, rgba(255,255,255,0) 100%);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tabs .list-container:before {
+    content: '';
+    background: #d8d8d8;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 41px;
+    z-index: -1;
+}
+.tabs .list-container:after {
+    content: '';
+    background: rgb(143,143,143);
+    background: linear-gradient(0deg, rgba(220,220,220,0.2) 0%, rgba(255,255,255,0) 100%);
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.tabs .tab-content {
+    padding: 18px;
+    border: 1px solid #d8d8d8;
+    border-top-color: transparent;
+}
+.radiotab {
+    position: absolute;
+    opacity: 0;
+}
+
+.label {
+    padding: 4px 18px 0;
+    cursor: pointer;
+    color: #7e7e7e;
+    width: 100%;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px 4px 0 0;
+    margin-left: -1px;
+}
+.label:first-of-type{
+    margin-left: 0;
+}
+
+.label:active {
+    background: #eeeeee;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+    /*position: absolute;*/
+    /*top: 44px;*/
+}
+
+.radiotab:checked + .label {
+    border-bottom-color: transparent;
+    background: white;
+    color: #000000;
+}
+.radiotab:checked + .label + .tab-content {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .tab-content {
+        order: 99;
+    }
+    .label {
+        width: auto;
+    }
+
+}
+@media screen and (min-width: 1440px) {
+    .tabs .container {
+        max-width: var(--grid-desktop-container-width);
+    }
+}
+
+.tabs .footer {
+    padding-top: var(--spacing-gap);
+    color: #ffffff;
+    text-align: center;
+}

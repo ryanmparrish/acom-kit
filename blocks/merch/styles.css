@@ -1,0 +1,63 @@
+.merch {
+    position: relative;
+    padding: var(--spacing-mobile) 0 var(--spacing-mobile) 0;
+}
+
+.merch.is-Loaded {
+    display: block;
+    opacity: 1;
+}
+
+.merch .ribbon img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.merch .ribbon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 25px;
+}
+
+.merch .title {
+    color: #ffffff;
+    text-align: center;
+}
+
+.merch .container {
+    max-width: var(--grid-mobile-container-width);
+    margin: 0 auto;
+}
+
+.merch .container {
+    position: relative;
+}
+
+.merch .products {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 1440px) {
+    .merch .container {
+        max-width: var(--grid-desktop-container-width);
+    }
+}
+
+.merch .prod {
+    background: #ffffff;
+    padding: var(--spacing-gap);
+    border-radius: 12px;
+    width: 32%;
+    margin: var(--spacing-gap);
+}
+
+.merch .footer {
+    padding-top: var(--spacing-gap);
+    color: #ffffff;
+    text-align: center;
+}
