@@ -1,6 +1,6 @@
 .merch {
     position: relative;
-    padding: var(--spacing-mobile) 0 var(--spacing-mobile) 0;
+    padding: var(--spacing-m) 0 var(--spacing-m) 0;
 }
 
 .merch.is-Loaded {
@@ -50,14 +50,14 @@
 
 .merch .prod {
     background: #ffffff;
-    padding: var(--spacing-gap);
+    padding: var(--spacing-m);
     border-radius: 12px;
     width: 32%;
-    margin: var(--spacing-gap);
+    margin: var(--spacing-m);
 }
 
 .merch .footer {
-    padding-top: var(--spacing-gap);
+    padding-top: var(--spacing-m);
     color: #ffffff;
     text-align: center;
 }

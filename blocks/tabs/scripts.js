@@ -1,21 +1,19 @@
 
 const init = (element) => {
-    const ribbon = element.querySelector(':scope > div:first-of-type > div');
-    ribbon.classList.add('ribbon');
-    const bgImg = ribbon.querySelector(':scope img');
+    const tabListBg = element.querySelector(':scope > div:first-of-type > div');
+    tabListBg.classList.add('tabListBg');
+    const bgImg = tabListBg.querySelector(':scope img');
     if (!bgImg) {
-        const bgColor = ribbon.textContent;
-        ribbon.style = `background: ${bgColor}`;
-        ribbon.innerHTML = '';
+        const bgColor = tabListBg.textContent;
+        tabListBg.style = `background: ${bgColor}`;
+        tabListBg.innerHTML = '';
     }
-    const title = element.querySelector(':scope > div:nth-of-type(2)');
-    title.classList.add('title');
 
     // create the tabs list container div
     const tabsListContainer = document.createElement('div');
-    const tabs = element.querySelectorAll(':scope > div:nth-of-type(3) > div');
-    const tabsContent = element.querySelectorAll(':scope > div:nth-of-type(4) > div');
-    const tabsStuff = element.querySelectorAll(':scope > div:nth-of-type(5) > div');
+    const tabs = element.querySelectorAll(':scope > div:nth-of-type(2) > div');
+    const tabsContent = element.querySelectorAll(':scope > div:nth-of-type(3) > div');
+    const tabsStuff = element.querySelectorAll(':scope > div:nth-of-type(4) > div');
     tabs.forEach(function (tab, i) {
         tab.remove();
         let isChecked = i === 0 ? ' checked' : '';
@@ -30,9 +28,9 @@ const init = (element) => {
         tabList.parentNode.insertBefore(content, tabList.nextSibling);
     });
 
-    // append the tabs list container after title
+    // append the tabs list container after tabListBg
     tabsListContainer.classList.add('container', 'list-container');
-    title.after(tabsListContainer);
+    tabListBg.after(tabsListContainer);
     tabsStuff.innerHTML = '';
 };
 

@@ -1,6 +1,6 @@
 .tabs {
     position: relative;
-    padding: var(--spacing-mobile) 0 var(--spacing-mobile) 0;
+    margin: var(--spacing-m) 0 var(--spacing-m) 0;
 }
 
 .tabs.is-Loaded {
@@ -8,19 +8,19 @@
     opacity: 1;
 }
 
-.tabs .ribbon img {
+.tabs .tabListBg img {
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
 
-.tabs .ribbon {
+.tabs .tabListBg {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    height: 25px;
+    height: 41px;
 }
 
 .tabs .title {
@@ -38,8 +38,6 @@
 }
 
 .tabs .list-container {
-    background: rgb(143,143,143);
-    background: linear-gradient(0deg, rgba(220,220,220,0.2) 0%, rgba(255,255,255,0) 100%);
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -53,19 +51,9 @@
     top: 41px;
     z-index: -1;
 }
-.tabs .list-container:after {
-    content: '';
-    background: rgb(143,143,143);
-    background: linear-gradient(0deg, rgba(220,220,220,0.2) 0%, rgba(255,255,255,0) 100%);
-    height: 40px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-}
 .tabs .tab-content {
     padding: 18px;
-    border: 1px solid #d8d8d8;
-    border-top-color: transparent;
+    border-bottom: 1px solid #d8d8d8;
 }
 .radiotab {
     position: absolute;
@@ -124,7 +112,7 @@
 }
 
 .tabs .footer {
-    padding-top: var(--spacing-gap);
+    padding-top: var(--spacing-m);
     color: #ffffff;
     text-align: center;
 }
