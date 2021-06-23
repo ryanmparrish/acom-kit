@@ -1,6 +1,7 @@
 .tabs {
     position: relative;
     margin: var(--spacing-m) 0 var(--spacing-m) 0;
+    opacity: 0;
 }
 
 .tabs.is-Loaded {
