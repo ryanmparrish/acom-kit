@@ -21,6 +21,7 @@
     top: 0;
     bottom: 0;
     height: 41px;
+    display: none;
 }
 
 .tabs .title {
@@ -88,10 +89,10 @@
 }
 
 .radiotab:checked + .label {
-    border-bottom-color: transparent;
     background: white;
     color: #000000;
 }
+
 .radiotab:checked + .label + .tab-content {
     display: block;
 }
@@ -102,6 +103,12 @@
     }
     .label {
         width: auto;
+    }
+    .radiotab:checked + .label {
+        border-bottom-color: transparent;
+    }
+    .tabs .tabListBg {
+        display: block;
     }
 
 }
