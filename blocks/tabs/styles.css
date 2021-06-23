@@ -33,9 +33,6 @@
 .tabs .container {
     max-width: var(--grid-mobile-container-width);
     margin: 0 auto;
-}
-
-.tabs .container {
     position: relative;
 }
 
@@ -56,6 +53,8 @@
 .tabs .tab-content {
     padding: 18px;
     border-bottom: 1px solid #d8d8d8;
+    display: none;
+    width: 100%;
 }
 .radiotab {
     position: absolute;
@@ -71,8 +70,6 @@
     height: 36px;
     line-height: 36px;
     border: 1px solid #d8d8d8;
-    border-radius: 4px 4px 0 0;
-    margin-left: -1px;
 }
 .label:first-of-type{
     margin-left: 0;
@@ -80,13 +77,6 @@
 
 .label:active {
     background: #eeeeee;
-}
-
-.tab-content {
-    display: none;
-    width: 100%;
-    /*position: absolute;*/
-    /*top: 44px;*/
 }
 
 .radiotab:checked + .label {
@@ -99,11 +89,13 @@
 }
 
 @media (min-width: 600px) {
-    .tab-content {
+    .tabs .tab-content {
         order: 99;
     }
     .label {
         width: auto;
+        border-radius: 4px 4px 0 0;
+        margin-left: -1px;
     }
     .radiotab:checked + .label {
         border-bottom-color: transparent;
@@ -113,6 +105,7 @@
     }
 
 }
+
 @media screen and (min-width: 1440px) {
     .tabs .container {
         max-width: var(--grid-desktop-container-width);
