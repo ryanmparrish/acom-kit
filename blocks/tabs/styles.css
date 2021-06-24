@@ -21,7 +21,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    height: 41px;
+    height: 48px;
     display: none;
 }
 
@@ -47,7 +47,7 @@
     height: 1px;
     width: 100%;
     position: absolute;
-    top: 41px;
+    top: 48px;
     z-index: -1;
 }
 .tabs .tab-content {
@@ -62,14 +62,14 @@
 }
 
 .label {
-    padding: 4px 18px 0;
+    padding: 16px;
+    line-height: 16px;
+    font-size: 16px;
     cursor: pointer;
     color: #7e7e7e;
     width: 100%;
     float: left;
-    height: 36px;
-    line-height: 36px;
-    border: 1px solid #d8d8d8;
+    border: 1px solid transparent;
 }
 .label:first-of-type{
     margin-left: 0;
@@ -98,7 +98,7 @@
         margin-left: -1px;
     }
     .radiotab:checked + .label {
-        border-bottom-color: transparent;
+        border-color: #d8d8d8 #d8d8d8 transparent;
     }
     .tabs .tabListBg {
         display: block;
@@ -107,6 +107,20 @@
 }
 
 @media screen and (min-width: 1440px) {
+
+    .label {
+        padding: 24px 32px 18px;
+        line-height: 18px;
+        font-size: 18px;
+    }
+    .tabs .tabListBg {
+        height: 60px;
+    }
+
+
+    .tabs .list-container:before {
+        top: 60px;
+    }
     .tabs .container {
         max-width: var(--grid-desktop-container-width);
     }
@@ -116,4 +130,23 @@
     padding-top: var(--spacing-m);
     color: #ffffff;
     text-align: center;
+}
+
+
+.tabs.dark {
+    background: #000000;
+}
+.tabs.dark .title {
+    color: #cfcfcf;
+}
+.tabs.dark .label {
+    border: 1px solid #515151;
+}
+.tabs.dark .radiotab:checked + .label {
+    color: white;
+    background: #000000;
+    border-bottom-color: transparent;
+}
+.tabs.dark .list-container:before {
+    background: #515151;
 }
