@@ -25,12 +25,17 @@ const init = (element) => {
         id.remove();
         let assocTabContent = document.getElementsByClassName('tab-id-' + id.textContent)[0];
         let tabList = tabsListContainer.querySelector('label[for="tab-' + id.textContent + '"]');
-        console.log(assocTabContent, tabList);
         if(assocTabContent && tabList) {
             assocTabContent.classList.add('tab-content', 'tab-index-'+i);
             assocTabContent.setAttribute('tabindex', 1);
             tabList.parentNode.insertBefore(assocTabContent, tabList.nextSibling);
         }
+    });
+
+    const products = tabsListContainer.querySelectorAll(':scope > .product');
+    products.forEach(function (p, i) {
+        var productTypeTitle = p.querySelector(':scope > div:nth-of-type(1) > div');
+        productTypeTitle.classList.add('product-wrapper');
     });
 
     // append the tabs list container after tabListBg
