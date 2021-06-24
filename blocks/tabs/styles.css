@@ -51,7 +51,7 @@
     z-index: -1;
 }
 .tabs .tab-content {
-    padding: 18px;
+    padding: 16px;
     border-bottom: 1px solid #d8d8d8;
     display: none;
     width: 100%;
@@ -115,6 +115,9 @@
     }
     .tabs .tabListBg {
         height: 60px;
+    }
+    .tabs .tab-content {
+        padding: 24px 32px 18px;
     }
 
 
