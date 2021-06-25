@@ -1,8 +1,8 @@
 .merch {
     position: relative;
     padding: var(--spacing-m) 0 var(--spacing-m) 0;
+    background: black;
 }
-
 .merch.is-Loaded {
     display: block;
     opacity: 1;
@@ -59,7 +59,7 @@
 
 .merch .product-wrapper {
     background: #ffffff;
-    padding: var(--spacing-m);
+    padding: var(--spacing-s);
     border-radius: 12px;
     margin-bottom: 24px;
 }
@@ -79,12 +79,39 @@
 }
 
 /*
+ .outro
+ .light
+ */
+
+.merch.light {
+    background: white;
+}
+.merch.light .title {
+    color: black;
+}
+.merch.gray .title {
+    color: #666666;
+}
+.merch.gray {
+    background: #f5f5f5;
+}
+.merch.light .footer,
+.merch.gray .footer {
+    color: black;
+}
+.merch.light .product-wrapper,
+.merch.gray .product-wrapper {
+    border-color: #cccccc;
+}
+
+/*
 Product wrapper
 */
 .product-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    border: 1px solid #000000;
 }
 .product-wrapper a {
     color: var(--spectrum-blue);
@@ -94,12 +121,12 @@ Product wrapper
     color: deeppink;
 }
 .product-wrapper > :nth-child(1) {
-    margin-right: 16px;
+    margin: 0 16px 0 0;
 }
 .product-wrapper > :nth-child(3) {
     flex: 1 1 100%;
     padding: 0;
-    margin: 0;
+    margin: 12px 0 0;
     font-size: 22px; font-weight: 400;
 }
 .product-wrapper > :nth-child(5) {
@@ -139,4 +166,8 @@ Product wrapper
 
 .product-wrapper > :nth-child(5) a:hover:after {
     opacity: 1;
+}
+.product-wrapper .stub {
+    display: none;
+    margin: 0;
 }
