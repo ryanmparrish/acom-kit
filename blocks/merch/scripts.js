@@ -19,7 +19,7 @@ const init = (element) => {
     dv.classList.add('container', 'products');
     const prods = element.querySelectorAll(':scope > div:nth-of-type(3) > div');
     prods.forEach(function (prod, index) {
-        prod.classList.add('prod');
+        prod.classList.add('product-wrapper');
         dv.appendChild(prod);
     });
     // append the container div after title
