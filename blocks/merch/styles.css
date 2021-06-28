@@ -89,6 +89,9 @@
 .merch.light .title {
     color: black;
 }
+.merch.gray {
+    display: none;
+}
 .merch.gray .title {
     color: #666666;
 }
