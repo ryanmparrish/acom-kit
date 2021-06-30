@@ -151,6 +151,11 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
+        '.products': {
+            location: '/blocks/products/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
     },
 };
 
