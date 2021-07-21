@@ -91,7 +91,7 @@
     z-index: 2;
 }
 
-
+/* center tabs */
 .tabs.center .list-container:after,
 .tabs.center .list-container:before {
     content: "";
@@ -140,7 +140,8 @@
     display: block;
 }
 
-@media (min-width: 600px) {
+/*invoke tabs as media (uncomment to enable)*/
+/*@media (min-width: 600px) {*/
     .tabs .tab-content {
         order: 99;
     }
@@ -163,7 +164,7 @@
         border-color: var(--tabs-border-color-dark) var(--tabs-border-color-dark) transparent;
     }
 
-}
+/*}*/
 
 @media screen and (min-width: 1440px) {
 
