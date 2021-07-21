@@ -17,6 +17,21 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
+        '.merch': {
+            location: '/blocks/merch/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
+        '.tabs': {
+            location: '/blocks/tabs/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
+        '.products': {
+            location: '/blocks/products/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
         'a[href^="https://gist.github.com"]': {
             location: '/blocks/embed/',
             scripts: 'gist.js',
@@ -187,6 +202,5 @@ const loadBlocks = (config, suppliedEl) => {
     init(parentEl);
 };
 
-blockLoader(config);
 loadTheme(config);
 loadBlocks(config);
