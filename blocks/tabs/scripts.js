@@ -1,4 +1,3 @@
-
 const init = (element) => {
     const tabListBg = element.querySelector(':scope > div:first-of-type > div');
     tabListBg.classList.add('tabListBg');
@@ -34,7 +33,7 @@ const init = (element) => {
 
     const products = tabsListContainer.querySelectorAll(':scope > .product');
     products.forEach(function (p, i) {
-        var productTypeTitle = p.querySelector(':scope > div:nth-of-type(1) > div');
+        let productTypeTitle = p.querySelector(':scope > div:nth-of-type(1) > div');
         productTypeTitle.classList.add('product-wrapper');
     });
 

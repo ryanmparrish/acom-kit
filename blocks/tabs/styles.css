@@ -99,7 +99,7 @@
 }
 
 .tabs .tab-content {
-    padding: 16px;
+    padding: 16px 0;
     border-bottom: 1px solid var(--tabs-border-color-light);
     display: none;
     width: 100%;
@@ -177,7 +177,7 @@
         height: 60px;
     }
     .tabs .tab-content {
-        padding: 24px 32px 18px;
+        padding: 32px 0;
     }
     .tabs .list-container:before {
         top: 60px;
@@ -221,6 +221,7 @@ Product wrapper
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    border: none;
 }
 .product-wrapper a {
     color: var(--spectrum-blue);

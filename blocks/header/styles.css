@@ -1,0 +1,14 @@
+.header{
+    margin: 16px;
+    background: white;
+    display: flex;
+    align-items: center;
+    color: #FA0F00;
+    position: relative;
+    padding-left: 28px;
+}
+.header img {
+    height: 20px;
+    position: absolute;
+    left: 0;
+}

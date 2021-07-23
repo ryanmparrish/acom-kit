@@ -1,0 +1,7 @@
+.headline{
+    padding: 24px 0;
+}
+
+.headline.center{
+    text-align: center;
+}

@@ -12,6 +12,20 @@ const config = {
         },
     },
     blocks: {
+        '.header': {
+            location: '/blocks/header/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
+        '.headline': {
+            location: '/blocks/headline/',
+            styles: 'styles.css',
+        },
+        '.grid': {
+            location: '/blocks/grid/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
         '.marquee': {
             location: '/blocks/marquee/',
             styles: 'styles.css',

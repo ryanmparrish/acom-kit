@@ -31,6 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    margin: var(--spacing-l) 0;
 }
 
 .marquee .container .text > * {
