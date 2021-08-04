@@ -1,0 +1,43 @@
+.promo {}
+.promo .container {
+    max-width: var(--grid-mobile-container-width);
+    margin: 0 auto;
+    position: relative;
+}
+.promo .container .content {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+}
+.promo .content .image {
+    max-width: 320px;
+    flex: 1 1 0;
+}
+.promo .content .text {
+    margin: 0 24px;
+    width: auto;
+    flex: 2 1 0;
+}
+.promo .content .text h1 {
+    margin-bottom: 0;
+}
+.promo .content .text p {
+    margin-top: 0;
+}
+.promo .content .link {
+    margin-left: auto;
+}
+.promo .ribbon img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.promo .ribbon {
+    height: 8px;
+}
+@media screen and (min-width: 1440px) {
+    .promo .container {
+        max-width: var(--grid-desktop-container-width);
+    }
+}

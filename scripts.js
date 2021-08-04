@@ -31,6 +31,11 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
+        '.media': {
+            location: '/blocks/media/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
         '.merch': {
             location: '/blocks/merch/',
             styles: 'styles.css',
@@ -41,8 +46,18 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
+        '.promo': {
+            location: '/blocks/promo/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
         '.products': {
             location: '/blocks/products/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
+        '.z-pattern': {
+            location: '/blocks/zpattern/',
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
