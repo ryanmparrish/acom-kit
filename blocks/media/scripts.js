@@ -11,6 +11,16 @@ const init = (element) => {
     let i;
     for (i = 0; i < ctas.length; i++) {
         ctas[i].classList.add(ctaType);
+        const ctaStyleCheck = ctas[i].textContent.includes(' --');
+        if (ctaStyleCheck) {
+            const ctaStringIndex = ctas[i].textContent.lastIndexOf(' --');
+            const ctaStyle = ctas[i].textContent.slice(ctaStringIndex);
+            const ctaUpdatedText = ctas[i].textContent.replace(`${ctaStyle}`, '');
+            const ctaStyleSanitize = ctaStyle.replace(' --', '');
+            ctas[i].setAttribute('data-icon', ctaStyleSanitize);
+            ctas[i].innerHTML = ctaUpdatedText;
+            ctas[i].classList.add(`${ctaStyleSanitize}`);
+        }
     }
 
     const content = document.createElement('div');

@@ -67,7 +67,7 @@
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
-    margin-right: 8px;
+    margin: 0 8px 8px 0;
     text-decoration: none;
     color: #1473E6;
 }
@@ -137,4 +137,32 @@
 /* desktop+ */
 @media screen and (min-width: 1440px) {
 
+}
+a[class^='icon-'],
+a[class*=' icon-'] {
+    position: relative;
+}
+
+a[class^='icon-']:before,
+a[class*=' icon-']:before {
+    content: '';
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding-right: 8px;
+}
+.icon-ds:before {
+    background: url("img/icon-ds.webp") no-repeat left center;
+}
+.icon-md:before {
+    background: url("img/icon-md.webp") no-repeat left center;
+}
+.icon-pt:before {
+    background: url("img/icon-pt.webp") no-repeat left center;
+}
+.icon-sa:before {
+    background: url("img/icon-sa.webp") no-repeat left center;
+}
+.icon-sg:before {
+    background: url("img/icon-sg.webp") no-repeat left center;
 }
