@@ -7,11 +7,10 @@ const init = (element) => {
     image.classList.add('image');
     text.classList.add('text');
     const ctaType = element.classList.contains('dark') ? 'cta dark' : 'cta';
-    const cta = text.querySelectorAll('a');
+    const ctas = text.querySelectorAll('a');
     let i;
-    for (i = 0; i < cta.length; i++) {
-        console.log(cta[i])
-        cta[i].classList.add(ctaType);
+    for (i = 0; i < ctas.length; i++) {
+        ctas[i].classList.add(ctaType);
     }
 
     const content = document.createElement('div');
