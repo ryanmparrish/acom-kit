@@ -1,4 +1,34 @@
 .media {}
+
+.media.is-Loaded {
+    display: block;
+}
+.media .m-content .image {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .2s ease-in, transform .2s ease-in;
+}
+.media .m-content .text {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .2s ease-in 0.1s, transform .2s ease-in 0.1s;
+}
+
+/*Supports up to 4 cascade in*/
+.media:nth-child(2) .m-content .image { transition-delay: 0.2s, 0.2s; }
+.media:nth-child(2) .m-content .text { transition-delay: 0.3s, 0.3s; }
+.media:nth-child(3) .m-content .image { transition-delay: 0.4s, 0.4s; }
+.media:nth-child(3) .m-content .text { transition-delay: 0.5s, 0.5s; }
+.media:nth-child(4) .m-content .image { transition-delay: 0.6s, 0.6s; }
+.media:nth-child(4) .m-content .text { transition-delay: 0.7s, 0.7s; }
+
+.media.init .m-content .image,
+.media.init .m-content .text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 .media .m-container {
     position: relative;
 }
@@ -81,7 +111,7 @@
     .media .m-container .m-content {
         flex-direction: row;
     }
-    .media.odd .m-container .m-content {
+    .media.row-reverse .m-container .m-content {
         flex-direction: row-reverse;
     }
     .media .m-content .text {
@@ -95,7 +125,7 @@
     .small .media .m-content .text {
         margin: 0 0 0 32px;
     }
-    .small .media.odd .m-content .text{
+    .small .media.row-reverse .m-content .text{
         margin: 0 32px 0 0;
     }
 }
@@ -104,7 +134,7 @@
     .medium .media .m-content .text {
         margin: 0 0 0 32px;
     }
-    .medium .media.odd .m-content .text{
+    .medium .media.row-reverse .m-content .text{
         margin: 0 32px 0 0;
     }
 }
@@ -129,7 +159,7 @@
     .large .media .m-content .text {
         margin: 0 0 0 32px;
     }
-    .large .media.odd .m-content .text{
+    .large .media.row-reverse .m-content .text{
         margin: 0 32px 0 0;
     }
 
@@ -149,7 +179,7 @@ a[class*=' icon-']:before {
     display: block;
     height: 40px;
     width: 40px;
-    padding-right: 8px;
+    padding-right: 4px;
 }
 .icon-ds:before {
     background: url("img/icon-ds.webp") no-repeat left center;

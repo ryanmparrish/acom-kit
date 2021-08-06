@@ -28,6 +28,9 @@ const init = (element) => {
     content.append(image);
     content.append(text);
     container.appendChild(content);
+    setTimeout(function() {
+        element.classList.add('init');
+    }, 500);
 };
 
 export default init;

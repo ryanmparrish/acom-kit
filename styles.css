@@ -111,6 +111,9 @@ a.over-background {
 }
 
 /* Block pre-loads */
-div[class^='marquee'] {
+div[class^='marquee'],
+div[class^='media'],
+div[class^='z-pattern'] {
     display: none;
 }
+
