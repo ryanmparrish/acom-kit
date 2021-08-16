@@ -2,6 +2,9 @@
     position: relative;
     padding: var(--spacing-l) 0 var(--spacing-l) 0;
 }
+.marquee.large {
+    padding: 0;
+}
 
 .marquee.is-Loaded {
     display: block;
@@ -75,6 +78,33 @@
     object-fit: contain;
     height: 100%;
     width: 100%;
+}
+
+.marquee.large .background {
+    position: relative;
+    min-height: 350px;
+}
+
+.marquee.large .background picture {
+    height: 350px;
+    display: block;
+}
+
+/*tablet*/
+@media screen and (min-width: 600px) {
+    .marquee.large {
+        padding: var(--spacing-l) 0 var(--spacing-l) 0;
+    }
+    .marquee.large .background {
+        position: absolute;
+    }
+    .marquee.large .container .text {
+        width: 40%;
+    }
+    .marquee.large .background picture {
+        height: auto;
+        display: initial;
+    }
 }
 
 @media screen and (min-width: 1200px) {

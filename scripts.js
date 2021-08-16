@@ -20,6 +20,7 @@ const config = {
         '.headline': {
             location: '/blocks/headline/',
             styles: 'styles.css',
+            scripts: 'scripts.js',
         },
         '.grid': {
             location: '/blocks/grid/',

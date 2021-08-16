@@ -179,7 +179,7 @@ a[class*=' icon-']:before {
     display: block;
     height: 40px;
     width: 40px;
-    padding-right: 4px;
+    padding-right: 8px;
 }
 .icon-ds:before {
     background: url("img/icon-ds.webp") no-repeat left center;

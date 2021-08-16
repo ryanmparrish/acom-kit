@@ -43,6 +43,7 @@
 
     /* Colors */
     --spectrum-blue: rgb(20, 115, 230);
+    --spectrum-blue-0: rgb(22, 129, 255);
 
     /* Grid */
     --grid-mobile-container-width: 83.4%;
@@ -96,6 +97,7 @@ a.secondary {
     padding: 0 14px;
     text-decoration: none;
     font-size: 14px;
+    margin-right: 32px;
 }
 
 a.over-background {

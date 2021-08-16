@@ -32,9 +32,6 @@
 .merch .container {
     max-width: var(--grid-mobile-container-width);
     margin: 0 auto;
-}
-
-.merch .container {
     position: relative;
 }
 
@@ -43,7 +40,8 @@
     flex-direction: column;
 }
 
-@media (min-width: 600px) {
+/* tablet */
+@media screen and (min-width: 768px) {
     .merch .products {
         flex-direction: row;
         justify-content: space-evenly;
@@ -75,7 +73,7 @@
     transition: color 0.2s ease-in-out;
 }
 .merch .footer a:hover {
-    color: deeppink;
+    color: var(--spectrum-blue-0);
 }
 
 /*

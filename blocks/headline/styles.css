@@ -5,3 +5,14 @@
 .headline.center{
     text-align: center;
 }
+.headline .container {
+    max-width: var(--grid-mobile-container-width);
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+    .header .container {
+        /*max-width: 1440px;*/
+        max-width: var(--grid-desktop-container-width);
+    }
+}
