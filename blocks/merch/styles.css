@@ -1,6 +1,6 @@
 .merch {
     position: relative;
-    padding: var(--spacing-m) 0 var(--spacing-m) 0;
+    padding: var(--spacing-l) 0;
     background: black;
 }
 .merch.is-Loaded {
@@ -26,7 +26,7 @@
 .merch .title {
     color: #ffffff;
     text-align: center;
-    padding: 24px 0;
+    padding: var(--spacing-m) 0;
     margin: 0 24px;
 }
 
@@ -45,8 +45,8 @@
 .merch .product-wrapper {
     background: #ffffff;
     padding: var(--spacing-s);
-    border-radius: 12px;
-    margin-bottom: 24px;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-m);
 }
 
 .merch .footer {
@@ -127,6 +127,10 @@ Product wrapper
     margin: 0;
     font-size: 18px; font-weight: 700;
 }
+/*prevent title/label overflow*/
+.product-wrapper.has-badge > .label {
+    margin-right: 60px;
+}
 .product-wrapper > .price {
     display: block;
     padding: 0;
@@ -143,8 +147,8 @@ Product wrapper
     transition: color 0.2s ease-in-out;
 }
 .product-wrapper > .cta {
-    margin: 48px 0 0;
-    padding: 24px 0 0;
+    margin: var(--spacing-l) 0 0;
+    padding: var(--spacing-m) 0 0;
     border-top: 1px solid #eaeaea;
     flex: 1 1 100%;
     text-align: right;
@@ -167,7 +171,7 @@ Product wrapper
     .merch .products {
         flex-direction: row;
         justify-content: space-evenly;
-        gap: 24px;
+        gap: var(--spacing-m);
     }
 
     .product-wrapper {
