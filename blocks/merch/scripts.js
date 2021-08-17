@@ -3,7 +3,6 @@
 
 const init = (element) => {
     const isDefault = element.classList.contains('default');
-
     const defaultMarkup = '    <div class="ribbon" style="background: linear-gradient(90deg, rgb(254, 54, 0) 0%, rgb(255, 123, 2) 20%, rgb(250, 210, 32) 35%, rgb(129, 218, 66) 60%, rgb(49, 142, 255) 85%, rgb(139, 104, 232) 100%);"></div>\n' +
         '    <div class="title">\n' +
         '        <div>\n' +
@@ -43,7 +42,6 @@ const init = (element) => {
 
     } else {
 
-        const typeIntro = element.classList.contains('intro') || element.classList.contains('no-icons');
         const ribbon = element.querySelector(':scope > div:first-of-type > div');
         ribbon.classList.add('ribbon');
         const bgImg = ribbon.querySelector(':scope img');
@@ -51,7 +49,6 @@ const init = (element) => {
             const bgColor = ribbon.textContent;
             ribbon.style = `background: ${bgColor}`;
             ribbon.innerHTML = '';
-    //        element.style.background = "#000000";
         }
         const title = element.querySelector(':scope > div:nth-of-type(2)');
         title.classList.add('title');
