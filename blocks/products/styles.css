@@ -85,22 +85,6 @@ Product wrapper
     border-color: var(--spectrum-blue);
     color: var(--spectrum-blue);
 }
-.product > .cta-secondary a:after,
-.product > .cta-primary a:after {
-    content: '';
-    position: absolute;
-    border-radius: 24px;
-    top: 0; left: 0; right: 0; bottom: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.product > .cta-secondary a:hover:after,
-.product > .cta-primary a:hover:after {
-    opacity: 1;
-}
-
 
 .product > .badge {
     position: absolute;

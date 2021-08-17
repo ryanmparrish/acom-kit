@@ -40,20 +40,6 @@
     flex-direction: column;
 }
 
-/* tablet */
-@media screen and (min-width: 768px) {
-    .merch .products {
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 24px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .merch .container {
-        max-width: var(--grid-desktop-container-width);
-    }
-}
 
 .merch .product-wrapper {
     background: #ffffff;
@@ -63,17 +49,14 @@
 }
 
 .merch .footer {
-    padding-top: var(--spacing-m);
+    padding: var(--spacing-m) 0;
     color: #ffffff;
     text-align: center;
 }
 
 .merch .footer a {
-    color: var(--spectrum-blue);
-    transition: color 0.2s ease-in-out;
-}
-.merch .footer a:hover {
-    color: var(--spectrum-blue-0);
+    text-decoration: underline;
+    color: #ffffff;
 }
 
 /*
@@ -101,6 +84,11 @@
 .merch.gray .footer {
     color: black;
 }
+
+.merch.light .footer a,
+.merch.gray .footer a {
+    color: black;
+}
 .merch.light .product-wrapper,
 .merch.gray .product-wrapper {
     border-color: #cccccc;
@@ -114,62 +102,80 @@ Product wrapper
     flex-wrap: wrap;
     align-items: center;
     border: 1px solid #000000;
+    width: 100%;
+    position: relative;
 }
-.product-wrapper a {
-    color: var(--spectrum-blue);
-    transition: color 0.2s ease-in-out;
+
+.product-wrapper.has-badge {
+    border-color: #ffd500;
 }
-.product-wrapper a:hover {
-    color: deeppink;
+
+/*product contents*/
+.product-wrapper > .inline-icon,
+.product-wrapper > .inline-label {
+    margin: 0;
 }
-.product-wrapper > :nth-child(1) {
-    margin: 0 16px 0 0;
+.product-wrapper > .inline-icon {
+    margin-right: 12px;
 }
-.product-wrapper > :nth-child(3) {
-    flex: 1 1 100%;
+.product-wrapper > .inline-label {
+    font-size: 18px;
+}
+.product-wrapper > .label {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+.product-wrapper > .price {
+    display: block;
     padding: 0;
     margin: 12px 0 0;
     font-size: 22px; font-weight: 400;
+    width: 100%;
 }
-.product-wrapper > :nth-child(5) {
+.product-wrapper > .desc {
+    margin: 12px 0 0;
+}
+.product-wrapper > .desc a{
+    color: var(--spectrum-blue);
+    transition: color 0.2s ease-in-out;
+}
+.product-wrapper > .cta {
+    margin: 24px 0 0;
+    padding: 24px 0 0;
+    border-top: 1px solid #eaeaea;
     flex: 1 1 100%;
     text-align: right;
 }
-.product-wrapper > :nth-child(5) a {
 
-    background: var(--spectrum-blue);
-    border-color: var(--spectrum-blue);
-    text-decoration: none;
-    color: white;
-    position: relative;
-
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 16px;
-    min-height: 32px;
-    height: auto;
-    min-width: 72px;
-    padding: 4px 14px;
-    padding-bottom: 4.5px;
-    padding-top: 3.5px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.product-wrapper > :nth-child(5) a:after {
-    content: '';
+.product-wrapper > .badge {
     position: absolute;
-    border-radius: 24px;
-    top: 0; left: 0; right: 0; bottom: 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    top: 12px;
+    right: 0;
+    padding: 4px 8px;
+    border-radius: 4px 0 0 4px;
+    background: #ffd500;
+    color: black;
+    margin: 0;
 }
 
-.product-wrapper > :nth-child(5) a:hover:after {
-    opacity: 1;
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .merch .products {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 24px;
+    }
+
+    .product-wrapper {
+        width: 33%;
+    }
 }
-.product-wrapper .stub {
-    display: none;
-    margin: 0;
+
+@media screen and (min-width: 1440px) {
+    .merch .container {
+        max-width: var(--grid-desktop-container-width);
+    }
 }

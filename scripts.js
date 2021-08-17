@@ -10,6 +10,11 @@ const config = {
             location: '/themes/styleguide/',
             styles: 'styles.css',
         },
+        gallery: {
+            class: 'gallery-theme',
+            location: '/themes/gallery/',
+            styles: 'styles.css',
+        },
     },
     blocks: {
         '.header': {
