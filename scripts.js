@@ -57,8 +57,8 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
-        '.products': {
-            location: '/blocks/products/',
+        '.products, .product': {
+            location: '/blocks/product/',
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
@@ -66,6 +66,10 @@ const config = {
             location: '/blocks/zpattern/',
             styles: 'styles.css',
             scripts: 'scripts.js',
+        },
+        '.pagenav': {
+            location: '/blocks/pagenav/',
+            styles: 'styles.css',
         },
         'a[href^="https://gist.github.com"]': {
             location: '/blocks/embed/',

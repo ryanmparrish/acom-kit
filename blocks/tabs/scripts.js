@@ -7,7 +7,6 @@ const init = (element) => {
         tabListBg.style = `background: ${bgColor}`;
         tabListBg.innerHTML = '';
     }
-
     // create the tabs list container div
     const tabsListContainer = document.createElement('div');
     const tabs = element.querySelectorAll(':scope > div:nth-of-type(2) > div');

@@ -42,6 +42,7 @@ const init = (element) => {
 
     } else {
 
+        console.log({element});
         const ribbon = element.querySelector(':scope > div:first-of-type > div');
         ribbon.classList.add('ribbon');
         const bgImg = ribbon.querySelector(':scope img');
@@ -60,18 +61,10 @@ const init = (element) => {
 
         prods.forEach(function (prod, index) {
 
-            let prodHasIcon = false;
             prod.classList.add('product-wrapper');
-            prod.childNodes.forEach( function (node, i) {
-               // node.classList.add('index-'+i);
-               //if First node has image aka Icon and text add flex class
-               const nodeImg = node.querySelector(':scope img');
-               if( i === 0 && nodeImg) {
-                   prodHasIcon = true;
-               }
-            });
-
-            if(prodHasIcon) {
+            // RP: some code duplication from product/scripts.js
+            let nodeZeroHasImg = prod.childNodes[0].querySelector(':scope img') ? true : false;
+            if(nodeZeroHasImg) {
                 prod.childNodes['0'].classList.add('inline-icon');
                 prod.childNodes['1'].classList.add('inline-label');
                 prod.childNodes['2'].classList.add('price');
@@ -99,7 +92,6 @@ const init = (element) => {
                     prod.classList.add('has-badge');
                 }
             }
-
             dv.appendChild(prod);
         });
         // append the container div after title

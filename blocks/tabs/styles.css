@@ -211,3 +211,11 @@
 .tabs.dark .label:active {
     background: var(--tabs-border-color-dark);
 }
+
+/*
+Product wrapper
+*/
+.tabs .product-wrapper {
+
+    /*border: none;*/
+}
