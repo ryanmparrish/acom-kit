@@ -97,7 +97,7 @@
     display: inline-flex;
     align-items: center;
     vertical-align: middle;
-    margin: 0 8px 8px 0;
+    margin: var(--spacing-s) var(--spacing-m) 0 0;
     text-decoration: none;
     color: #1473E6;
 }
@@ -127,6 +127,9 @@
     }
     .small .media.row-reverse .m-content .text{
         margin: 0 32px 0 0;
+    }
+    .media .m-content .cta {
+        margin-bottom: var(--spacing-xs);
     }
 }
 /*med width*/
@@ -179,7 +182,7 @@ a[class*=' icon-']:before {
     display: block;
     height: 40px;
     width: 40px;
-    padding-right: 8px;
+    padding-right: 12px;
 }
 .icon-ds:before {
     background: url("img/icon-ds.webp") no-repeat left center;
