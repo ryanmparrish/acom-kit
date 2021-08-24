@@ -3,6 +3,10 @@
     color: #FA0F00;
 }
 
+.header.is-Loaded {
+    display: block;
+}
+
 .header .container {
     max-width: var(--grid-mobile-container-width);
     margin: 0 auto;
