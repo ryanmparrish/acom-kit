@@ -97,7 +97,13 @@ a.secondary {
     padding: 0 14px;
     text-decoration: none;
     font-size: 14px;
-    margin-right: 32px;
+    margin-right: 16px;
+}
+/* tablet */
+@media screen and (min-width: 768px) {
+    a.secondary {
+        margin-right: 32px;
+    }
 }
 
 a.over-background {
