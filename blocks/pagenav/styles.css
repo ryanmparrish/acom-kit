@@ -1,13 +1,17 @@
 .pagenav {
     background: white;
     color: #222222;
-    padding: 0 12px;
+    padding: 0;
     line-height: 1.1em;
     font-size: 14px;
     border-bottom: 1px solid #cccccc;
     z-index: 999;
     max-width: var(--grid-mobile-container-width);
     margin: 0 auto;
+}
+.pagenav.fixed {
+    position: fixed;
+    top: 0;
 }
 .pagenav > div > div {
     display: flex;

@@ -1,8 +1,8 @@
 /*
-product wrapper
+product
 */
 
-.product-wrapper {
+.product {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -11,52 +11,72 @@ product wrapper
 }
 
 /*product contents*/
-.product-wrapper > .inline-icon,
-.product-wrapper > .inline-label {
+.product > .inline-icon,
+.product > .inline-label {
     margin: 0;
 }
-.product-wrapper > .inline-icon {
+
+.product h1,
+.product h2,
+.product h3,
+.product h4,
+.product h5,
+.product h6 {
+    margin: 0;
+}
+
+.product > .inline-icon {
     margin-right: 12px;
 }
-.product-wrapper > .inline-label {
+.product > .inline-label :is(h1, h2, h3, h4, h5, h6) {
     font-size: 18px;
 }
-.product-wrapper > .label {
+.product > .label {
     display: block;
     padding: 0;
     margin: 0;
+}
+.product > .label :is(h1, h2, h3, h4, h5, h6) {
     font-size: 18px; font-weight: 700;
 }
 /*prevent title/label overflow*/
-.product-wrapper.has-badge > .label {
+.product.has-badge > .label {
     margin-right: 60px;
 }
-.product-wrapper > .price {
+.product > .price {
     display: block;
     padding: 0;
     margin: 12px 0 0;
-    font-size: 18px; font-weight: 400;
     width: 100%;
 }
-.product-wrapper > .desc {
+.product > .price :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 18px; font-weight: 400;
+}
+.product > .desc {
     margin: 12px 0 0;
     font-size: 14px; font-weight: 400;
 }
-.product-wrapper > .desc a{
+.product > .desc a{
     color: var(--spectrum-blue);
     text-decoration: none;
 }
-.product-wrapper > .desc a:hover{
+.product > .desc a:hover{
     text-decoration: underline;
 }
-.product-wrapper > .cta {
-    margin: var(--spacing-l) 0 0;
+.product > .cta {
+    margin: var(--spacing-m) 0 0;
     padding: var(--spacing-m) 0 0;
     border-top: 1px solid #eaeaea;
     flex: 1 1 100%;
-    text-align: right;
 }
-.product-wrapper > .badge {
+.product > .cta > .cta-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+.product > .cta p{
+    margin: 0;
+}
+.product > .badge {
     position: absolute;
     top: 12px;
     right: 0;
@@ -65,4 +85,9 @@ product wrapper
     background: #EDCC2D;
     color: black;
     margin: 0;
+    font-size: 13px;
+}
+.product > .badge.badge-dark {
+    background: black;
+    color: white;
 }

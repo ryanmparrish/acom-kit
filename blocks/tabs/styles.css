@@ -29,6 +29,7 @@
     /* Tab Colors */
     /* Light */
     --tabs-border-color-light: #d8d8d8;
+    --tabs-border-hover-color-light: #acacac;
     --tabs-text-color-light: #7e7e7e;
     --tabs-active-text-color-light: #000000;
     --tabs-bg-color-light: #f1f1f1;
@@ -87,8 +88,64 @@
 .tabs .list-container {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
     z-index: 2;
+}
+
+/* ScrollProps */
+.tabs .list-container{
+    /* scroll bar width, for use in mask calculations */
+    --scrollbar-width: 8px;
+
+    /* mask fade distance, for use in mask calculations */
+    --mask-width: 32px;
+
+    /* If content exceeds height of container, overflow! */
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox 64 */
+
+
+    /* Need to make sure container has bottom space,
+    otherwise content at the bottom is always faded out */
+    padding-right: var(--mask-width);
+
+    /* The CSS mask */
+
+    /* The content mask is a linear gradient from top to bottom */
+    --mask-image-content: linear-gradient(
+        to right,
+        transparent,
+        black var(--mask-width),
+        black calc(100% - var(--mask-width)),
+        transparent
+    );
+
+    /* Here we scale the content gradient to the width of the container
+    minus the scrollbar width. The height is the full container height */
+    --mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+
+    /* The scrollbar mask is a black pixel */
+    --mask-image-scrollbar: linear-gradient(black, black);
+
+    /* The width of our black pixel is the width of the scrollbar.
+    The height is the full container height */
+    --mask-size-scrollbar: var(--scrollbar-width) 100%;
+
+    /* Apply the mask image and mask size variables */
+    mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+    mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+
+    /* Position the content gradient in the top left, and the
+    scroll gradient in the top right */
+    mask-position: 0 0, 100% 0;
+
+    /* We don't repeat our mask images */
+    mask-repeat: no-repeat, no-repeat;
+}
+.tabs .list-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
 }
 
 /* center tabs */
@@ -101,15 +158,12 @@
 .tabs .tab-content {
     padding: 16px 0;
     border-bottom: 1px solid var(--tabs-border-color-light);
-    display: none;
     width: 100%;
+    /*display: none;*/
 }
-.radiotab {
-    position: absolute;
-    opacity: 0;
-}
+.tabs .tab-content {}
 
-.label {
+.tab-item {
     padding: 16px;
     line-height: 16px;
     font-size: 16px;
@@ -121,23 +175,46 @@
     border-color: var(--tabs-border-color-light) transparent;
     margin-top: -1px;
     background: var(--tabs-bg-color-light);
-    transition: color 0.2s ease-in-out;
+    transition: color 0.1s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    text-decoration: none;
+    white-space: nowrap;
 }
-.label:first-of-type{
+.tab-item:first-of-type{
     margin-left: 0;
     margin-top: 0;
 }
-.label:hover{
+.tab-item:hover{
     color: var(--tabs-active-text-color-light);
 }
+.tab-item:active{
+    color: var(--spectrum-blue);
+}
 
-.radiotab:checked + .label {
+.tab-item[aria-selected="true"] {
     background: var(--tabs-active-bg-color-light);
     color: var(--tabs-active-text-color-light);
 }
+/*- Tabs: .quiet -*/
+.tabs.quiet .tab-item{
+    border-width: 0 0 2px;
+    border-color: transparent;
+    background: transparent;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 16px;
+}
+.tabs.quiet .tab-item:first-of-type {
+    margin-left: 0;
+}
+.tabs.quiet .tabListBg {
+    /*height: 48px;*/
+}
 
-.radiotab:checked + .label + .tab-content {
-    display: block;
+.tabs.quiet .tab-item:hover{
+    border-bottom-color: var(--tabs-border-hover-color-light);
+}
+.tabs.quiet .tab-item[aria-selected="true"]{
+    border-bottom-color: var(--spectrum-blue);
 }
 
 /*invoke tabs as media (uncomment to enable)*/
@@ -149,7 +226,7 @@
         height: 48px;
         display: block;
     }
-    .label {
+    .tab-item {
         width: auto;
         border-radius: 4px 4px 0 0;
         margin-left: -1px;
@@ -157,10 +234,10 @@
         border-color: transparent;
         background: transparent;
     }
-    .radiotab:checked + .label {
+    .tab-item[aria-selected="true"] {
         border-color: var(--tabs-border-color-light) var(--tabs-border-color-light) transparent;
     }
-    .dark .radiotab:checked + .label {
+    .dark .tab-item[aria-selected="true"] {
         border-color: var(--tabs-border-color-dark) var(--tabs-border-color-dark) transparent;
     }
 
@@ -168,7 +245,7 @@
 
 @media screen and (min-width: 1440px) {
 
-    .label {
+    .tab-item {
         padding: 24px 32px 18px;
         line-height: 18px;
         font-size: 18px;
@@ -197,18 +274,18 @@
 .tabs.dark {
     background: var(--tabs-active-bg-color-dark);
 }
-.tabs.dark .label {
+.tabs.dark .tab-item {
     color: var(--tabs-text-color-dark);
     background: var(--tabs-bg-color-dark);
 }
-.tabs.dark .radiotab:checked + .label {
+.tabs.dark .tab-item[aria-selected="true"] {
     color: white;
     background: var(--tabs-active-bg-color-dark);
 }
 .tabs.dark .list-container:before {
     background: var(--tabs-border-color-dark);
 }
-.tabs.dark .label:active {
+.tabs.dark .tab-item[aria-selected="true"] {
     background: var(--tabs-border-color-dark);
 }
 

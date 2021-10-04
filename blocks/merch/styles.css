@@ -38,13 +38,13 @@
     position: relative;
 }
 
-.merch .products {
+.merch .blocks {
     display: flex;
     flex-direction: column;
 }
 
 
-.merch .product-wrapper {
+.merch .block {
     background: #ffffff;
     padding: var(--spacing-s);
     border-radius: 8px;
@@ -81,7 +81,8 @@
     display: none;
 }
 .merch.gray .title {
-    color: #666666;
+    /*color: #666666;*/
+    color: black;
 }
 .merch.light .footer,
 .merch.gray .footer {
@@ -92,32 +93,39 @@
 .merch.gray .footer a {
     color: black;
 }
-.merch.light .product-wrapper,
-.merch.gray .product-wrapper {
+.merch.light .block,
+.merch.gray .block {
     border-color: #cccccc;
 }
 
-.merch.light .product-wrapper.has-badge,
-.merch.gray .product-wrapper.has-badge {
+.merch .block.has-badge,
+.merch.light .block.has-badge,
+.merch.gray .block.has-badge {
     border-color: #EDCC2D;
 }
-.merch .product-wrapper.has-badge{
-    border-color: #EDCC2D;
+
+.merch .block.has-badge.badge-dark,
+.merch.light .block.has-badge.badge-dark,
+.merch.gray .block.has-badge.badge-dark {
+    border-color: #cccccc;
 }
+
 /*prevent title/label overflow*/
-.merch .product-wrapper.has-badge > .label {
+.merch .block.has-badge > .label {
     margin-right: 60px;
 }
 
+
+
 /* tablet */
 @media screen and (min-width: 768px) {
-    .merch .products {
+    .merch .blocks {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         gap: var(--spacing-m);
     }
 
-    .merch .product-wrapper {
+    .merch .block {
         width: 33%;
     }
 }

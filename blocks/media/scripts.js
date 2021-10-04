@@ -2,10 +2,10 @@ const init = (element) => {
     // create the tabs list container div
     const container = element.querySelector(':scope > div:first-of-type');
     container.classList.add('m-container');
-    const image = container.querySelector(':scope > div:first-of-type');
-    const text = container.querySelector(':scope > div:last-of-type');
-    image.classList.add('image');
+    const text = container.querySelector(':scope > div:first-of-type');
+    const image = container.querySelector(':scope > div:last-of-type');
     text.classList.add('text');
+    image.classList.add('image');
     const ctaType = element.classList.contains('dark') ? 'cta dark' : 'cta';
     const ctas = text.querySelectorAll('a');
     let i;

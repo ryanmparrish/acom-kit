@@ -17,6 +17,11 @@ const config = {
         },
     },
     blocks: {
+        '.aside': {
+            location: '/blocks/aside/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
         '.header': {
             location: '/blocks/header/',
             styles: 'styles.css',
@@ -57,7 +62,7 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
-        '.products, .product': {
+        '.product, .product': {
             location: '/blocks/product/',
             styles: 'styles.css',
             scripts: 'scripts.js',
@@ -70,6 +75,7 @@ const config = {
         '.pagenav': {
             location: '/blocks/pagenav/',
             styles: 'styles.css',
+            scripts: 'scripts.js',
         },
         'a[href^="https://gist.github.com"]': {
             location: '/blocks/embed/',
