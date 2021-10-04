@@ -104,6 +104,12 @@ main > div > h2 {
         -1px 1px 0 #fff,
         1px 1px 0 #fff;
 }
+main > div > h2 a {
+    float: right;
+    font-size: 13px;
+    text-shadow: none;
+    color: var(--spectrum-blue);
+}
 
 main > div > h2:after {
     content: "";
