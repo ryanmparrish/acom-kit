@@ -1,0 +1,6 @@
+<svg id="Bookmark" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <rect id="Canvas" width="22" height="22" fill="#ff13dc" opacity="0"/>
+  <path id="Path_25" data-name="Path 25" d="M8.1,18.554,6.833,16.506,5.568,18.554A.306.306,0,0,1,5,18.4V12H8.667v6.4a.306.306,0,0,1-.568.157Z" transform="translate(1.111 2.667)" fill="#707070"/>
+  <path id="Path_26" data-name="Path 26" d="M4.667,16.326a2.436,2.436,0,0,1,1.219-4.549h6.431a.611.611,0,0,0,.489-.244l6.783-9.044A.306.306,0,0,0,19.345,2H9.571a.611.611,0,0,0-.489.244L1.931,11.367a4.857,4.857,0,0,0,2.737,7.57Z" transform="translate(0.222 0.444)" fill="#707070"/>
+  <path id="Path_27" data-name="Path 27" d="M17.567,8H15.589l-5.5,7.333H9v2.444h1.539a.611.611,0,0,0,.489-.244l6.783-9.044A.306.306,0,0,0,17.567,8Z" transform="translate(2 1.778)" fill="#707070"/>
+</svg>

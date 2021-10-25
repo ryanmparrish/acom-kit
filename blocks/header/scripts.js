@@ -94,7 +94,8 @@ const init = (element) => {
         }
         footerHTML += '</ul>'
     });
-    footer.innerHTML = footerHTML;
+    if(footer)
+        footer.innerHTML = footerHTML;
 };
 
 export default init;

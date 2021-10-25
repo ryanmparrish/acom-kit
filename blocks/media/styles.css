@@ -53,6 +53,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+    max-width: 100%;
 }
 .media .m-content .text {
     margin: 24px 0 0;
@@ -73,10 +74,18 @@
     font-size: var(--type-body-s-size);
     line-height: var(--type-body-s-lh);
 }
+
 .media.small .m-content .image {
-    width: 432px;
+    width: auto;
     max-width: 432px;
     min-height: auto;
+}
+
+@media screen and (min-width: 768px) {
+
+    .media.small .m-content .image {
+        width: 432px;
+    }
 }
 
 /*Medium*/

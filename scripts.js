@@ -22,6 +22,11 @@ const config = {
             styles: 'styles.css',
             scripts: 'scripts.js',
         },
+        '.card': {
+            location: '/blocks/card/',
+            styles: 'styles.css',
+            scripts: 'scripts.js',
+        },
         '.header': {
             location: '/blocks/header/',
             styles: 'styles.css',

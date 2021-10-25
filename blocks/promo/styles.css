@@ -11,9 +11,12 @@
 .promo .content .image {
     width: 100%;
 }
+
 .promo .content .image img {
     max-width: 300px;
+    width: 100%;
 }
+
 .promo .content .text,
 .promo .content .link {
     width: 100%;
